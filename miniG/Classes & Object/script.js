@@ -1,6 +1,11 @@
 //basic class
 
 class toyotaCar {
+    constructor(brand, mileage) {
+        console.log ("playing with constructor");
+        this.brandName = brand;
+        this.mileage = mileage;
+    }
     start() {
         console.log("start");
     }
@@ -9,17 +14,9 @@ class toyotaCar {
         console.log ("stop");
     }
 
-    setBrand (brand) {
-        this.brandName = brand;
-    }
-    setSeries (series) {
-        this.series = series;
-    }
 }
 
 
-let fortuner = new toyotaCar ();
-fortuner.setBrand ("fortuner");
-fortuner.setSeries ("Joss");
-let lexus = new toyotaCar ();
-lexus.setSeries("beshi joss");
+let fortuner = new toyotaCar ("fortuner",10); //fortuner
+console.log(fortuner);
+let lexus = new toyotaCar (); //undefined
